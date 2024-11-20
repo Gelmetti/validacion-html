@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expresiones regulares</title>
+</head>
+<body>
+
+    <h1>Validacion html con atributo pattern</h1>
+    <form action="">
+        <label for="nombre">Nombre:</label>
+        <input 
+        type="text"
+        id="nombre"
+        name="nombre"
+        required
+        title="el nombre solo puedo conteer letras y espacios"
+        pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$"
+        maxlength="10" minlength="4">
+
+        <br>
+        <!--telefono
+        (+34) sea opcional
+        seguido de 9 digitos
+        -->
+
+        <h1>validar telefono</h1>
+        <input type="text" id="telf" name="telf" pattern="^(\(\+34\)\s?)?\d{9}$" title="El número debe tener 9 dígitos, con un prefijo opcional (+34).">
+
+
+
+        
+        <input type="submit">
+    </form>
+    <!--contraseña de minimo de minimo 8 caracter , una mayuscula , un numero y un caracter especial-->
+      <h1>validar contraseña</h1>
+    <input 
+  type="password" 
+  pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$" 
+  title="La contraseña debe tener al menos 8 caracteres, una mayúscula, un número y un carácter especial."
+  required>
+
+</body>
+</html>
